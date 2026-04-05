@@ -12,7 +12,7 @@ export const orderSchema = z.object({
     "Комбінований",
     "Не можу визначити",
   ]),
-  budget: z.enum(["small", "medium", "large", "unspecified"]),
+  budget: z.enum(["unspecified", "small", "medium", "large"]),
   description: z.string().min(20, "Опишіть проєкт детальніше"),
 });
 

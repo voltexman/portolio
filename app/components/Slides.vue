@@ -23,7 +23,14 @@ const slides = ref([
     description:
       "Якщо ваш сайт застарів, втратив візуальну привабливість або повільно працює — не дозволяйте йому гальмувати ваш бізнес. Звертайтесь, і я виправлю це",
     image: "/header-rebrending.png",
-    tags: ["рестайлінг", "редизайн", "ребрендінг", "SEO-friendly"],
+    tags: [
+      "рестайлінг",
+      "редизайн",
+      "ребрендінг",
+      "SEO-friendly",
+      "оновлення",
+      "презентація",
+    ],
   },
 ]);
 
@@ -65,9 +72,9 @@ onUnmounted(() => {
           quality="90"
         />
 
-        <!-- Білий fade overlay -->
+        <!-- Overlay -->
         <div
-          class="absolute inset-0 bg-black/45 lg:bg-linear-to-r lg:from-white/96 lg:from-25% lg:via-white/80 lg:via-45% lg:to-transparent lg:to-75%"
+          class="absolute inset-0 bg-black/45 lg:bg-transparent lg:bg-linear-to-r lg:from-black/25 lg:from-25% lg:via-black/20 lg:via-40% lg:to-transparent lg:to-75%"
         ></div>
 
         <!-- Content -->
@@ -76,7 +83,7 @@ onUnmounted(() => {
         >
           <div class="w-full max-w-lg">
             <h1
-              class="text-3xl font-black leading-[1.05] tracking-tight text-white lg:text-neutral-950 sm:text-4xl lg:text-5xl"
+              class="text-3xl font-black leading-[1.05] tracking-tight text-neutral-100 sm:text-4xl lg:text-5xl"
             >
               <span class="text-3xl lg:text-6xl">{{ slide.titleFirst }}</span>
               <br />
@@ -88,7 +95,7 @@ onUnmounted(() => {
             </h1>
 
             <div
-              class="mt-5 lg:mt-10 max-w-2xl text-base leading-6 lg:leading-8 text-white lg:text-neutral-700 sm:text-lg lg:text-xl"
+              class="mt-5 lg:mt-10 max-w-2xl text-base leading-6 lg:leading-7 text-neutral-300 sm:text-lg lg:text-xl"
             >
               {{ slide.description }}
             </div>
@@ -98,16 +105,16 @@ onUnmounted(() => {
               <span
                 v-for="tag in slide.tags"
                 :key="tag"
-                class="px-3 py-1 flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-neutral-300 lg:text-neutral-600 bg-neutral-100/25 lg:bg-neutral-100/80 rounded-full border border-neutral-200/25 lg:border-neutral-300"
+                class="px-3 py-1 flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-white bg-neutral-100/40 backdrop-blur-xs rounded-full border border-neutral-100/40"
               >
                 {{ tag }}
               </span>
             </div>
 
-            <div class="mt-5 flex flex-wrap">
+            <div class="mt-10 flex flex-wrap">
               <NuxtLink
                 to="/order"
-                class="inline-flex rounded-full bg-white text-black lg:bg-neutral-950 px-8 py-4 text-sm font-semibold lg:text-white transition-all duration-300 hover:-translate-y-0.5"
+                class="inline-flex rounded-full bg-white text-black px-8 py-4 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
               >
                 Обговорити проєкт
               </NuxtLink>

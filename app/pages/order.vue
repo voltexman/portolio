@@ -99,9 +99,9 @@ const onSubmit = handleSubmit(async (values) => {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField v-slot="{ componentField }" name="name">
           <FormItem>
-            <FormLabel>Username</FormLabel>
+            <FormLabel>Ваше ім`я</FormLabel>
             <FormControl>
-              <Input placeholder="shadcn" v-bind="componentField" />
+              <Input placeholder="Євгеній" v-bind="componentField" />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -120,9 +120,12 @@ const onSubmit = handleSubmit(async (values) => {
 
         <FormField v-slot="{ componentField }" name="phone">
           <FormItem>
-            <FormLabel>Username</FormLabel>
+            <FormLabel>Номер телефону</FormLabel>
             <FormControl>
-              <Input placeholder="shadcn" v-bind="componentField" />
+              <Input
+                placeholder="+380 (63) 123-45-67"
+                v-bind="componentField"
+              />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -186,18 +189,18 @@ const onSubmit = handleSubmit(async (values) => {
 
             <SelectContent class="rounded-xl border-neutral-100 shadow-xl">
               <SelectGroup>
-                <SelectItem value="unspecified" class="font-medium"
-                  >Не визначено</SelectItem
-                >
-                <SelectItem value="small" class="font-medium"
-                  >$500 — $1,500</SelectItem
-                >
-                <SelectItem value="medium" class="font-medium"
-                  >$1,500 — $3,000</SelectItem
-                >
-                <SelectItem value="large" class="font-medium"
-                  >$3,000+</SelectItem
-                >
+                <SelectItem value="unspecified" class="font-medium">
+                  Не визначено
+                </SelectItem>
+                <SelectItem value="small" class="font-medium">
+                  5,000 грн — 10,000 грн
+                </SelectItem>
+                <SelectItem value="medium" class="font-medium">
+                  10,000 грн — 25,000 грн
+                </SelectItem>
+                <SelectItem value="large" class="font-medium">
+                  25,000+
+                </SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

@@ -124,6 +124,41 @@ const links = [
           </NuxtLink>
         </nav>
 
+        <NuxtLink
+          to="/order"
+          class="mt-auto group relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-neutral-950 px-6 py-4 transition-all duration-500 hover:bg-black hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.3)]"
+        >
+          <!-- Текстовий блок -->
+          <div class="relative z-10 flex flex-col items-start gap-0.5">
+            <span
+              class="text-[10px] font-black uppercase tracking-[0.2em] text-white"
+            >
+              Замовити проект
+            </span>
+            <span
+              class="text-[9px] font-medium uppercase tracking-widest text-neutral-400 transition-colors group-hover:text-neutral-400"
+            >
+              Обговорити ідею
+            </span>
+          </div>
+
+          <!-- Іконка з динамічним фоном -->
+          <div
+            class="relative flex size-9 items-center justify-center rounded-xl bg-white/40 transition-all duration-500 group-hover:bg-white group-hover:text-black"
+          >
+            <Icon
+              name="ph:arrow-right-bold"
+              size="16"
+              class="transition-transform duration-500 group-hover:translate-x-0.5"
+            />
+          </div>
+
+          <!-- Легкий блік при ховері -->
+          <div
+            class="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/5 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
+          ></div>
+        </NuxtLink>
+
         <!-- Contact -->
         <div class="mt-auto" :class="isMenuOpen ? '' : 'hidden lg:block'">
           <div class="space-y-2.5 text-sm">

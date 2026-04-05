@@ -74,7 +74,7 @@ const faqs = [
       <Slides />
     </template>
 
-    <section class="py-24 max-w-7xl mx-auto">
+    <section class="py-10 max-w-7xl mx-auto">
       <!-- Header секції -->
       <div
         class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
@@ -166,7 +166,7 @@ const faqs = [
     </section>
 
     <!-- Стек технологій -->
-    <section class="mb-10">
+    <section class="my-10">
       <div class="mb-10 text-center">
         <h2 class="text-2xl font-black tracking-tighter uppercase mb-1">
           Стек технологій
@@ -205,7 +205,9 @@ const faqs = [
             class="block text-[10px] uppercase tracking-[0.2em] text-pink-400 mb-1"
             >Styling</span
           >
-          <h4 class="font-bold text-lg">Tailwindcss</h4>
+          <h4 class="font-bold text-lg text-nowrap">
+            Tailwindcss <span class="hidden lg:inline-block">/ Bootstrap</span>
+          </h4>
         </div>
 
         <div
@@ -242,12 +244,15 @@ const faqs = [
 
     <!-- Навички -->
     <section class="mb-10">
-      <div class="grid grid-cols-2 gap-x-12 gap-y-7">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8"
+      >
+        <!-- Nuxt 3 -->
         <div>
           <div class="flex items-end gap-4">
-            <span class="text-4xl font-bold text-black">Ai</span>
+            <span class="text-4xl font-bold text-black">Nu</span>
             <span class="text-sm uppercase tracking-widest text-gray-500"
-              >Illustrator</span
+              >Nuxt 3</span
             >
           </div>
           <div class="h-2 bg-gray-200 mt-3 rounded">
@@ -255,23 +260,25 @@ const faqs = [
           </div>
         </div>
 
+        <!-- Laravel -->
         <div>
           <div class="flex items-end gap-4">
-            <span class="text-4xl font-bold text-black">Ps</span>
+            <span class="text-4xl font-bold text-black">La</span>
             <span class="text-sm uppercase tracking-widest text-gray-500"
-              >Photoshop</span
+              >Laravel</span
             >
           </div>
           <div class="h-2 bg-gray-200 mt-3 rounded">
-            <div class="h-2 w-[90%] bg-black rounded"></div>
+            <div class="h-2 w-[92%] bg-black rounded"></div>
           </div>
         </div>
 
+        <!-- React -->
         <div>
           <div class="flex items-end gap-4">
-            <span class="text-4xl font-bold text-black">Id</span>
+            <span class="text-4xl font-bold text-black">Re</span>
             <span class="text-sm uppercase tracking-widest text-gray-500"
-              >InDesign</span
+              >React</span
             >
           </div>
           <div class="h-2 bg-gray-200 mt-3 rounded">
@@ -279,15 +286,81 @@ const faqs = [
           </div>
         </div>
 
+        <!-- Vue.js -->
         <div>
           <div class="flex items-end gap-4">
-            <span class="text-4xl font-bold text-black">Ae</span>
+            <span class="text-4xl font-bold text-black">Vu</span>
             <span class="text-sm uppercase tracking-widest text-gray-500"
-              >After Effect</span
+              >Vue.js</span
             >
           </div>
           <div class="h-2 bg-gray-200 mt-3 rounded">
-            <div class="h-2 w-[80%] bg-black rounded"></div>
+            <div class="h-2 w-[90%] bg-black rounded"></div>
+          </div>
+        </div>
+
+        <!-- TypeScript -->
+        <div>
+          <div class="flex items-end gap-4">
+            <span class="text-4xl font-bold text-black">Ts</span>
+            <span class="text-sm uppercase tracking-widest text-gray-500"
+              >TypeScript</span
+            >
+          </div>
+          <div class="h-2 bg-gray-200 mt-3 rounded">
+            <div class="h-2 w-[88%] bg-black rounded"></div>
+          </div>
+        </div>
+
+        <!-- Tailwind CSS -->
+        <div>
+          <div class="flex items-end gap-4">
+            <span class="text-4xl font-bold text-black">Tw</span>
+            <span class="text-sm uppercase tracking-widest text-gray-500">
+              Tailwind CSS
+            </span>
+          </div>
+          <div class="h-2 bg-gray-200 mt-3 rounded">
+            <div class="h-2 w-[95%] bg-black rounded"></div>
+          </div>
+        </div>
+
+        <!-- Blade -->
+        <div>
+          <div class="flex items-end gap-4">
+            <span class="text-4xl font-bold text-black">Bl</span>
+            <span class="text-sm uppercase tracking-widest text-gray-500"
+              >Blade</span
+            >
+          </div>
+          <div class="h-2 bg-gray-200 mt-3 rounded">
+            <div class="h-2 w-[90%] bg-black rounded"></div>
+          </div>
+        </div>
+
+        <!-- Livewire -->
+        <div>
+          <div class="flex items-end gap-4">
+            <span class="text-4xl font-bold text-black">Lw</span>
+            <span class="text-sm uppercase tracking-widest text-gray-500"
+              >Livewire</span
+            >
+          </div>
+          <div class="h-2 bg-gray-200 mt-3 rounded">
+            <div class="h-2 w-[82%] bg-black rounded"></div>
+          </div>
+        </div>
+
+        <!-- Pinia -->
+        <div>
+          <div class="flex items-end gap-4">
+            <span class="text-4xl font-bold text-black">Pi</span>
+            <span class="text-sm uppercase tracking-widest text-gray-500"
+              >Pinia</span
+            >
+          </div>
+          <div class="h-2 bg-gray-200 mt-3 rounded">
+            <div class="h-2 w-[85%] bg-black rounded"></div>
           </div>
         </div>
       </div>
