@@ -30,7 +30,7 @@ const { defineField, handleSubmit, isSubmitting, resetForm } =
   });
 
 const [projectType] = defineField("projectType");
-const isSubmitted = ref(true);
+const isSubmitted = ref(false);
 
 const onSubmit = handleSubmit(async (values) => {
   try {
