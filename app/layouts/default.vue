@@ -126,7 +126,8 @@ const links = [
 
         <NuxtLink
           to="/order"
-          class="mt-auto group relative flex w-full items-center justify-between overflow-hidden rounded-xl bg-neutral-950 px-6 py-4 transition-all duration-500 hover:bg-black hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.3)]"
+          class="mt-auto group relative w-full items-center justify-between overflow-hidden rounded-xl bg-neutral-950 px-6 py-4 transition-all duration-500 hover:bg-black hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.3)]"
+          :class="isMenuOpen ? 'flex' : 'hidden lg:flex'"
         >
           <!-- Текстовий блок -->
           <div class="relative z-10 flex flex-col items-start gap-0.5">
