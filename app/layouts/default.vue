@@ -160,7 +160,7 @@ const links = [
         </NuxtLink>
 
         <!-- Contact -->
-        <div class="mt-auto" :class="isMenuOpen ? '' : 'hidden lg:block'">
+        <div class="mt-5" :class="isMenuOpen ? '' : 'hidden lg:block'">
           <div class="space-y-2.5 text-sm">
             <div class="flex justify-center items-center gap-2.5">
               <Icon name="mynaui:envelope" style="color: black" size="16" />
