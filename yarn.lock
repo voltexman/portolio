@@ -4109,6 +4109,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"defu@npm:^6.1.5":
+  version: 6.1.7
+  resolution: "defu@npm:6.1.7"
+  checksum: 10c0/e6635388103c8be3c574ac31302f6930e5e6eeedba32cb1b30cf993c7d9fb571aec2485446dfa23bfa63e55e66156fe109027a9695db82a50f931e91e8d4bedb
+  languageName: node
+  linkType: hard
+
 "denque@npm:^2.1.0":
   version: 2.1.0
   resolution: "denque@npm:2.1.0"
@@ -6081,7 +6088,7 @@ __metadata:
     clsx: "npm:^2.1.1"
     lucide-vue-next: "npm:^1.0.0"
     nuxt: "npm:^4.4.2"
-    reka-ui: "npm:^2.9.3"
+    reka-ui: "npm:^2.9.5"
     shadcn-nuxt: "npm:2.5.1"
     tailwind-merge: "npm:^3.5.0"
     tailwindcss: "npm:^4.2.2"
@@ -7163,9 +7170,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reka-ui@npm:^2.9.3":
-  version: 2.9.3
-  resolution: "reka-ui@npm:2.9.3"
+"reka-ui@npm:^2.9.5":
+  version: 2.9.5
+  resolution: "reka-ui@npm:2.9.5"
   dependencies:
     "@floating-ui/dom": "npm:^1.6.13"
     "@floating-ui/vue": "npm:^1.1.6"
@@ -7175,11 +7182,11 @@ __metadata:
     "@vueuse/core": "npm:^14.1.0"
     "@vueuse/shared": "npm:^14.1.0"
     aria-hidden: "npm:^1.2.4"
-    defu: "npm:^6.1.4"
+    defu: "npm:^6.1.5"
     ohash: "npm:^2.0.11"
   peerDependencies:
     vue: ">= 3.4.0"
-  checksum: 10c0/3f7be5de306ee6f453d777dd5a69d50683b62f6ac9ceacd8b1646b639d2b4f00236021573f0c85caf16b78ab798737b475f94be9a178ff0270148dbad303b29a
+  checksum: 10c0/ab6530eb6797fc32c7e657ebf44bf1729132216bd820d2c47f187d20046817451302aff84deaa61368a27d751df61c67dec5dd96bcd1730dce175fee43242f31
   languageName: node
   linkType: hard
 

@@ -17,12 +17,6 @@
               Джоган Костянтин
             </div>
           </div>
-          <div class="hidden lg:block">
-            <div class="text-sm font-semibold text-neutral-800">Стек</div>
-            <div class="text-sm font-medium text-neutral-700 flex gap-2">
-              <span>Laravel</span><span>Tailwindcss</span>
-            </div>
-          </div>
           <div>
             <div class="text-sm font-semibold text-neutral-800">Рік</div>
             <div class="text-sm font-medium text-neutral-700">2026</div>
