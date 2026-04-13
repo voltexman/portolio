@@ -16,11 +16,11 @@ import { faqs } from '~/data/faqs';
 <template>
   <NuxtLayout>
     <template #header>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center pt-20">
         <div class="flex flex-col justify-center items-center">
           <div class="size-50 mx-auto mt-10 mb-5">
             <NuxtImg src="/person.png"
-              class="size-full object-cover object-top rounded-full p-0.5 shadow-xl border-2 border-stone-400 grayscale-15 contrast-110" />
+              class="size-full object-cover object-top rounded-full p-0.5 shadow-xl border border-stone-300 grayscale-15 contrast-110" />
           </div>
           <h1 class="font-[Montserrat] text-3xl text-nowrap font-extrabold leading-none">
             Лісовий Євгеній
@@ -59,11 +59,44 @@ import { faqs } from '~/data/faqs';
           </span>
         </div>
 
-        <div class="mt-5 text-gray-600 text-center max-w-2xl mx-auto px-5 lg:px-0">
-          Я переконаний, що програмування — це не просто обсяг знань, а вміння аналізувати та знаходити рішення. Колись
-          поява ткацьких верстатів викликала страх у тих, хто не встигав пристосуватися: вбачаючи в машинах загрозу,
-          люди намагалися їх знищити. Проте історія вчить нас, що прогрес варто не зупиняти, а очолювати. Я допоможу
-          вашому бізнесу не боятися змін і поставлю технології штучного інтелекту вам на службу
+        <div class="mt-5 max-w-3xl mx-auto px-6 text-center group">
+          <!-- Верхня тонка лінія з мікро-іконкою -->
+          <div class="flex items-center justify-center gap-4 mb-8">
+            <div class="h-px w-12 bg-neutral-200"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-neutral-300"></div>
+            <div class="h-px w-12 bg-neutral-200"></div>
+          </div>
+
+          <div class="relative">
+            <!-- Деликатна лапка на фоні -->
+            <span
+              class="absolute -top-10 left-1/2 -translate-x-1/2 text-8xl text-neutral-100/60 font-serif select-none pointer-events-none">
+              “
+            </span>
+
+            <p class="relative text-neutral-700 leading-relaxed font-light tracking-wide text-balance">
+              <!-- Перша частина — Акцент -->
+              <span class="font-medium text-neutral-900">
+                Я переконаний, що програмування — це не просто обсяг знань, а вміння аналізувати та знаходити рішення.
+              </span>
+
+              <!-- Історична частина — Італік та м'який колір -->
+              <span class="block mt-4 text-neutral-500 italic font-serif">
+                Колись поява ткацьких верстатів викликала страх у тих, хто не встигав пристосуватися: вбачаючи в машинах
+                загрозу, люди намагалися їх знищити. Проте історія вчить нас, що прогрес варто не зупиняти, а очолювати.
+              </span>
+
+              <!-- Фінал — Впевненість -->
+              <span class="block mt-4 text-neutral-800 font-medium">
+                Я допоможу вашому бізнесу не боятися змін і поставлю технології штучного інтелекту вам на службу.
+              </span>
+            </p>
+          </div>
+
+          <!-- Нижня лінія -->
+          <div class="flex items-center justify-center gap-4 mt-8">
+            <div class="h-px w-24 bg-linear-to-r from-transparent via-neutral-200 to-transparent"></div>
+          </div>
         </div>
 
         <NuxtLink to="/order"
@@ -93,7 +126,7 @@ import { faqs } from '~/data/faqs';
 
     <section>
       <Tabs default-value="projects">
-        <TabsList class="mx-auto bg-stone-200 mb-10">
+        <TabsList class="mx-auto bg-stone-200 -mt-20 mb-10">
           <TabsTrigger value="projects">
             Проекти
           </TabsTrigger>
@@ -102,7 +135,7 @@ import { faqs } from '~/data/faqs';
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="projects" class="animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <TabsContent value="projects">
           <!-- Header секції -->
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div class="max-w-xl">
@@ -166,7 +199,7 @@ import { faqs } from '~/data/faqs';
           </div>
         </TabsContent>
 
-        <TabsContent value="resume" class="mt-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <TabsContent value="resume">
 
           <!-- Секція: Освіта -->
           <section class="mb-12">

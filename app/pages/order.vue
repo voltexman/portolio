@@ -49,18 +49,13 @@ const onSubmit = handleSubmit(async (values) => {
 
 <template>
   <NuxtLayout>
-    <div
-      v-if="isSubmitted"
-      class="flex flex-col items-center justify-center py-20 text-center animate-in fade-in zoom-in-95 duration-700"
-    >
+    <div v-if="isSubmitted"
+      class="flex flex-col items-center justify-center py-20 text-center animate-in fade-in zoom-in-95 duration-700">
       <!-- Стильна іконка успіху -->
       <div class="relative mb-10">
+        <div class="absolute inset-0 bg-black/5 rounded-full scale-150 animate-pulse"></div>
         <div
-          class="absolute inset-0 bg-black/5 rounded-full scale-150 animate-pulse"
-        ></div>
-        <div
-          class="relative size-20 bg-black text-white rounded-full flex items-center justify-center shadow-2xl shadow-black/20"
-        >
+          class="relative size-20 bg-black text-white rounded-full flex items-center justify-center shadow-2xl shadow-black/20">
           <Icon name="ph:check-bold" size="36" />
         </div>
       </div>
@@ -71,9 +66,7 @@ const onSubmit = handleSubmit(async (values) => {
           Заявку <span class="text-neutral-400 italic">отримано</span>
         </h2>
 
-        <p
-          class="text-sm font-medium text-neutral-500 leading-relaxed tracking-wide uppercase"
-        >
+        <p class="text-sm font-medium text-neutral-500 leading-relaxed tracking-wide uppercase">
           Дякую за довіру. Я перегляну деталі вашого проєкту та зв'яжуся з вами
           протягом робочого дня.
         </p>
@@ -81,21 +74,24 @@ const onSubmit = handleSubmit(async (values) => {
 
       <!-- Кнопка повернення або додаткова дія -->
       <div class="mt-12 flex flex-col items-center gap-6">
-        <button
-          @click="isSubmitted = false"
-          class="group flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-neutral-400 hover:text-black transition-all duration-300"
-        >
+        <button @click="isSubmitted = false"
+          class="group flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-neutral-400 hover:text-black transition-all duration-300">
           <span>Надіслати ще один запит</span>
-          <Icon
-            name="ph:arrow-right"
-            class="group-hover:translate-x-1 transition-transform"
-            size="14"
-          />
+          <Icon name="ph:arrow-right" class="group-hover:translate-x-1 transition-transform" size="14" />
         </button>
       </div>
     </div>
 
-    <form v-else @submit="onSubmit" class="space-y-8 max-w-2xl mx-auto py-12">
+    <form v-else @submit="onSubmit" class="space-y-6">
+      <header class="mb-16">
+        <span class="text-xs font-black tracking-widest text-neutral-400 mb-4">
+          Контакти та деталі
+        </span>
+        <h1 class="text-4xl md:text-5xl font-black tracking-tighter text-stone-950 italic">
+          Розпочнімо щось <br />
+          <span class="not-italic text-stone-300 leading-none">особливе разом.</span>
+        </h1>
+      </header>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField v-slot="{ componentField }" name="name">
           <FormItem>
@@ -122,10 +118,7 @@ const onSubmit = handleSubmit(async (values) => {
           <FormItem>
             <FormLabel>Номер телефону</FormLabel>
             <FormControl>
-              <Input
-                placeholder="+380 (63) 123-45-67"
-                v-bind="componentField"
-              />
+              <Input placeholder="+380 (63) 123-45-67" v-bind="componentField" />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -134,34 +127,22 @@ const onSubmit = handleSubmit(async (values) => {
 
       <!-- Тип проєкту (Radio Buttons стилізовані) -->
       <div class="flex flex-col gap-4">
-        <label
-          class="text-[10px] font-black uppercase tracking-widest text-neutral-400"
-          >Тип сайту</label
-        >
+        <label class="text-[10px] font-black uppercase tracking-widest text-neutral-400">Тип сайту</label>
         <div class="flex flex-wrap gap-2">
-          <label
-            v-for="type in [
-              'Лендінг',
-              'Візитка',
-              'Корпоративний',
-              'Магазин',
-              'Комбінований',
-              'Не можу визначити',
-            ]"
-            :key="type"
+          <label v-for="type in [
+            'Лендінг',
+            'Візитка',
+            'Корпоративний',
+            'Магазин',
+            'Комбінований',
+            'Не можу визначити',
+          ]" :key="type"
             class="cursor-pointer border px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
-            :class="
-              projectType === type
+            :class="projectType === type
                 ? 'bg-black text-white border-black'
                 : 'bg-white text-neutral-500 border-neutral-200 hover:border-neutral-400'
-            "
-          >
-            <input
-              type="radio"
-              v-model="projectType"
-              :value="type"
-              class="hidden"
-            />
+              ">
+            <input type="radio" v-model="projectType" :value="type" class="hidden" />
             {{ type }}
           </label>
         </div>
@@ -169,20 +150,14 @@ const onSubmit = handleSubmit(async (values) => {
 
       <FormField v-slot="{ field }" name="budget">
         <FormItem class="flex flex-col gap-2">
-          <FormLabel
-            class="text-[10px] font-black uppercase tracking-widest text-neutral-400"
-          >
+          <FormLabel class="text-[10px] font-black uppercase tracking-widest text-neutral-400">
             Орієнтовний бюджет
           </FormLabel>
 
-          <Select
-            :model-value="field.value"
-            @update:model-value="field.onChange"
-          >
+          <Select :model-value="field.value" @update:model-value="field.onChange">
             <FormControl>
               <SelectTrigger
-                class="bg-neutral-100 border-none p-6 rounded-xl text-sm font-bold focus:ring-2 ring-black/5 h-auto"
-              >
+                class="bg-neutral-100 border-none p-6 rounded-xl text-sm font-bold focus:ring-2 ring-black/5 h-auto">
                 <SelectValue placeholder="Оберіть бюджет" />
               </SelectTrigger>
             </FormControl>
@@ -214,22 +189,15 @@ const onSubmit = handleSubmit(async (values) => {
         <FormItem>
           <FormLabel>Про проект</FormLabel>
           <FormControl>
-            <Textarea
-              placeholder="Опишіть ваш проект"
-              v-bind="componentField"
-              class="h-40"
-            />
+            <Textarea placeholder="Опишіть ваш проект" v-bind="componentField" class="h-40" />
           </FormControl>
           <FormMessage />
         </FormItem>
       </FormField>
 
       <!-- Кнопка відправки -->
-      <button
-        type="submit"
-        :disabled="isSubmitting"
-        class="w-fit bg-black text-white ms-auto px-8 py-4 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-neutral-800 transition-all disabled:bg-neutral-300"
-      >
+      <button type="submit" :disabled="isSubmitting"
+        class="w-fit bg-black text-white ms-auto px-8 py-4 rounded-full font-black uppercase tracking-[0.2em] text-xs hover:bg-neutral-800 transition-all disabled:bg-neutral-300">
         {{ isSubmitting ? "Відправка..." : "Надіслати запит" }}
       </button>
     </form>

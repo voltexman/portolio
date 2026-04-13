@@ -5,14 +5,15 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/s
 import { useScroll } from '@/composables/useScroll';
 import { links } from '~/data/links';
 
-const isOpen = ref(false);
 const { isScrolled } = useScroll();
+const { isProject } = useProject();
+const isOpen = ref(false);
 </script>
 
 <template>
   <div class="bg-neutral-50 min-h-screen">
     <!-- Навігація -->
-    <nav :class="[
+    <nav v-if="!isProject" :class="[
       'fixed top-0 left-0 w-full z-50 h-18 transition-all duration-500 flex items-center px-6',
       isScrolled ? 'bg-white/80 backdrop-blur-lg border-b border-stone-200 shadow-md shadow-black/3' : 'bg-transparent'
     ]">
@@ -34,7 +35,7 @@ const { isScrolled } = useScroll();
         <!-- Десктопне меню (по центру) -->
         <div class="hidden md:flex gap-5 absolute left-1/2 -translate-x-1/2">
           <NuxtLink v-for="link in links" :key="link.to" :to="link.to"
-            class="text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors">
+            class="text-xs font-semibold text-gray-700 hover:text-gray-900 transition-colors" active-class="text-black">
             {{ link.name }}
           </NuxtLink>
         </div>
@@ -67,14 +68,11 @@ const { isScrolled } = useScroll();
       </div>
     </nav>
 
-    <!-- Основний контент -->
-    <div class="pt-20">
-      <slot name="header" />
+    <slot name="header" />
 
-      <div class="px-6 py-10 w-full">
-        <div class="max-w-3xl mx-auto w-full">
-          <slot />
-        </div>
+    <div class="px-6 py-30 lg:px-0">
+      <div class="max-w-3xl mx-auto">
+        <slot />
       </div>
     </div>
   </div>

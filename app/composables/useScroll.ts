@@ -10,5 +10,5 @@ export function useScroll() {
   onMounted(() => window.addEventListener("scroll", handleScroll));
   onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
-  return { isScrolled }
+  return { isScrolled };
 }

@@ -9,24 +9,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Dzhohan<br>Knives",
-    category: "Інтернет<br>магазин",
+    title: "Dzhohan Knives",
+    category: "Інтернет магазин",
     image: "/project-1.jpg",
     tags: ["Laravel", "Tailwind", "Filament"],
     year: "2026",
     link: "dzhohanknives",
   },
   {
-    title: "Slavena<br>Hair",
-    category: "Інтернет<br>каталог",
+    title: "Slavena Hair",
+    category: "Інтернет каталог",
     image: "/project-2.jpg",
     tags: ["Laravel", "GSAP"],
     year: "2025",
     link: "slavenahair",
   },
   {
-    title: "TryIt<br>Clining",
-    category: "Сайт<br>візитка",
+    title: "TryIt Clining",
+    category: "Сайт візитка",
     image: "/project-3.jpg",
     tags: ["React", "Node.js", "AWS"],
     year: "2025",
